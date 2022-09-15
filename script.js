@@ -58,7 +58,11 @@ const validate = (key) => {
   if (key === questionText[userText.length - 1]) {
     return true;
   }
-  return false;
+  else{
+    errorCount ++;
+    return false;
+  }
+    
 };
 
 // FINISHED TYPING
@@ -136,6 +140,3 @@ setInterval(() => {
 
   document.getElementById("show-time").innerHTML = `${startTime ? parseInt(timeSpent) : 0} seconds`;
 }, 1000);
-
-
-console.log('script file added');
